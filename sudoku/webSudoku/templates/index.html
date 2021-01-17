@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Sudoku Solver</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 class="title">Sudoku Solver</h1>
+            <img class="icon" src="https://img.icons8.com/windows/64/000000/sudoku.png"/>
+        </div>
+    </header>
+
+    <div class="container">
+        <form method="POST"> {% csrf_token %}
+            <table id="sudoku">
+                <tbody>
+                    <div class="square">
+                        <tr>
+                            <td><input type="number" name="num1"/></td>
+                            <td><input type="number" name="num2"/></td>
+                            <td><input type="number" name="num3"/></td>
+                            <td><input type="number" name="num4"/></td>
+                            <td><input type="number" name="num5"/></td>
+                            <td><input type="number" name="num6"/></td>
+                            <td><input type="number" name="num7"/></td>
+                            <td><input type="number" name="num8"/></td>
+                            <td><input type="number" name="num9"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="num10"/></td>
+                            <td><input type="number" name="num11"/></td>
+                            <td><input type="number" name="num12"/></td>
+                            <td><input type="number" name="num13"/></td>
+                            <td><input type="number" name="num14"/></td>
+                            <td><input type="number" name="num15"/></td>
+                            <td><input type="number" name="num16"/></td>
+                            <td><input type="number" name="num17"/></td>
+                            <td><input type="number" name="num18"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="num19"/></td>
+                            <td><input type="number" name="num20"/></td>
+                            <td><input type="number" name="num21"/></td>
+                            <td><input type="number" name="num22"/></td>
+                            <td><input type="number" name="num23"/></td>
+                            <td><input type="number" name="num24"/></td>
+                            <td><input type="number" name="num25"/></td>
+                            <td><input type="number" name="num26"/></td>
+                            <td><input type="number" name="num27"/></td>
+                    </div>
+                    <div class="square">
+                        <tr>
+                            <td><input type="number" name="num28"/></td>
+                            <td><input type="number" name="num29"/></td>
+                            <td><input type="number" name="num30"/></td>
+                            <td><input type="number" name="num31"/></td>
+                            <td><input type="number" name="num32"/></td>
+                            <td><input type="number" name="num33"/></td>
+                            <td><input type="number" name="num34"/></td>
+                            <td><input type="number" name="num35"/></td>
+                            <td><input type="number" name="num36"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="num37"/></td>
+                            <td><input type="number" name="num38"/></td>
+                            <td><input type="number" name="num39"/></td>
+                            <td><input type="number" name="num40"/></td>
+                            <td><input type="number" name="num41"/></td>
+                            <td><input type="number" name="num42"/></td>
+                            <td><input type="number" name="num43"/></td>
+                            <td><input type="number" name="num44"/></td>
+                            <td><input type="number" name="num45"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="num46"/></td>
+                            <td><input type="number" name="num47"/></td>
+                            <td><input type="number" name="num48"/></td>
+                            <td><input type="number" name="num49"/></td>
+                            <td><input type="number" name="num50"/></td>
+                            <td><input type="number" name="num51"/></td>
+                            <td><input type="number" name="num52"/></td>
+                            <td><input type="number" name="num53"/></td>
+                            <td><input type="number" name="num54"/></td>
+                        </tr>
+                    </div>
+                    <div class="square">
+                        <tr>
+                            <td><input type="number" name="num55"/></td>
+                            <td><input type="number" name="num56"/></td>
+                            <td><input type="number" name="num57"/></td>
+                            <td><input type="number" name="num58"/></td>
+                            <td><input type="number" name="num59"/></td>
+                            <td><input type="number" name="num60"/></td>
+                            <td><input type="number" name="num61"/></td>
+                            <td><input type="number" name="num62"/></td>
+                            <td><input type="number" name="num63"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="num64"/></td>
+                            <td><input type="number" name="num65"/></td>
+                            <td><input type="number" name="num66"/></td>
+                            <td><input type="number" name="num67"/></td>
+                            <td><input type="number" name="num68"/></td>
+                            <td><input type="number" name="num69"/></td>
+                            <td><input type="number" name="num70"/></td>
+                            <td><input type="number" name="num71"/></td>
+                            <td><input type="number" name="num72"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="num73"/></td>
+                            <td><input type="number" name="num74"/></td>
+                            <td><input type="number" name="num75"/></td>
+                            <td><input type="number" name="num76"/></td>
+                            <td><input type="number" name="num77"/></td>
+                            <td><input type="number" name="num78"/></td>
+                            <td><input type="number" name="num79"/></td>
+                            <td><input type="number" name="num80"/></td>
+                            <td><input type="number" name="num81"/></td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

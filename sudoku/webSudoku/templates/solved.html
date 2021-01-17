@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Sudoku Solver</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 class="title">Sudoku Solver</h1>
+            <img class="icon" src="https://img.icons8.com/windows/64/000000/sudoku.png"/>
+        </div>
+    </header>
+
+    <div class="container">
+        <table id="sudoku">
+            <tbody>
+                <div class="square">
+                        {% for row in board %}
+                            <tr>
+                                <td>{{row.0}}</td>
+                                <td>{{row.1}}</td>
+                                <td>{{row.2}}</td>
+                                <td>{{row.3}}</td>
+                                <td>{{row.4}}</td>
+                                <td>{{row.5}}</td>
+                                <td>{{row.6}}</td>
+                                <td>{{row.7}}</td>
+                                <td>{{row.8}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tr>
+                </div>
+            </tbody>
+        </table>
+        <a href="/">Return</a>
+    </div>
+</body>
+</html>

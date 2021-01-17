@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+
+/* VARIABLES */
+:root{
+    /* Colors */
+    --green: #7DCFB6;
+    --blue: #00B2CA;
+}
+
+
+/* HEADER */
+header{
+    height: 4rem;
+    background-color:var(--green);
+    position: relative;
+}
+
+header .logo{
+    position: absolute;
+    bottom: 10px;
+    left: 15px
+}
+
+
+header h1.title{
+    font-family: 'Bitter', serif;
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+header .icon{
+    height: 3em;
+    position: relative;
+    left: .9em;
+    top: .6em;
+}
+
+
+/* MAIN */
+.container{
+    border: 5px solid var(--blue);
+    width: 35%;
+    margin: 12px auto;
+    border-radius: 10%;
+}
+
+table{ 
+    width: 80%;
+    margin: 20px auto;
+}
+
+tr:first-child td {
+    border-top-color: black;
+    
+}
+
+tr:nth-child(3n) td {
+	border-bottom-color: black;
+}
+
+td {
+	border: 1px solid lightgrey;
+	height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+td:first-child {
+	border-left-color: black;
+}
+
+td:nth-child(3n) {
+	border-right-color: black;
+}
+
+input {
+    padding: 0;
+	border: 0;
+	height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+input:focus{
+    border: 1.5px solid black;
+}
+
+button{
+    padding: 10px 60px;
+    border-radius: 2rem;
+    position: relative;
+    bottom:15px;
+    left: 130px;
+    font-family: 'Bitter', serif;
+}
+
+button:hover{
+    background-color: var(--green);
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    bottom:15px;
+    left: 125px;
+    display: inline-block;
+    padding: 10px 60px;
+    border: 2px solid black;
+    border-radius: 2rem;
+    margin: 5px;
+    font-family: 'Bitter', serif;
+    font-size: .8rem;
+    color: -internal-light-dark(black, white);
+}
+
+a:hover{
+    background-color: var(--green);
+}
+
+/*  VIEWPORT */
+
+@media only screen and (max-width: 1190px){
+    header h1.title{
+        font-size: 1.8rem;
+    }
+    header .icon{
+        height: 2.5em
+    }
+    .container{
+        margin: 60px auto;
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width:760px){
+    .container{
+        width: 90%;
+    }
+    input{
+        height:30px;
+        width:30px;
+    }
+}
